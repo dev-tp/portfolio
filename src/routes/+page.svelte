@@ -1,0 +1,96 @@
+<nav class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end bg-inherit px-12">
+	<ul class="flex gap-4">
+		<li class="px-4 py-2"><a href="#about">About Me</a></li>
+		<li class="px-4 py-2"><a href="#experience">Experience</a></li>
+		<li class="px-4 py-2"><a href="#projects">Projects</a></li>
+		<li class="px-4 py-2"><a href="#contact">Get in touch</a></li>
+		<li class="bg-black">
+			<a
+				class="inline-block border bg-white px-4 py-2 transition-transform ease-in-out hover:-translate-1"
+				href="#"
+				target="_blank"
+			>
+				Résumé
+			</a>
+		</li>
+	</ul>
+</nav>
+<main class="mx-24 font-text">
+	<section class="flex h-screen flex-col justify-center">
+		<p class="font-mono">Hello, my name is</p>
+		<h1 class="font-header text-7xl/21">Erik Sorto</h1>
+		<p class="font-header text-6xl/18">I build things for fun.</p>
+		<p class="w-full md:w-2/5">
+			I'm a software engineer by trade and tinckerer at heart. I dabble in all areas from web design
+			to low level, IoT things. When I'm not writing code, you can find me riding my bike around LA
+			on the weekends.
+		</p>
+	</section>
+	<section id="about" class="min-h-screen pt-20">
+		<h2 class="font-header text-2xl">About Me</h2>
+	</section>
+	<section id="experience" class="min-h-screen pt-20">
+		<h2 class="font-header text-2xl">Work Experience</h2>
+		<div class="flex">
+			<ul>
+				<li><button>Cathedral of Our Lady of the Angels</button></li>
+				<li><button>Countrywide Trial Lawyers</button></li>
+				<li><button>UrbanTxT</button></li>
+			</ul>
+			<div>
+				<div>
+					<h3>
+						Web developer &amp; IT
+						<a href="https://www.olacathedral.org" target="_blank">
+							@ Cathedral of Our Lady of the Angels
+						</a>
+					</h3>
+					<p>January 2018 &ndash; August 2025</p>
+				</div>
+				<div>
+					<h3>
+						IT
+						<a href="https://www.countrywidetriallawyers.com" target="_blank">
+							@ Countrywide Trial Lawyers
+						</a>
+					</h3>
+					<p>January 2022 &ndash; Present</p>
+				</div>
+				<div>
+					<h3>
+						Instructor
+						<a href="https://www.urbantxt.org" target="_blank"> @ UrbanTxT </a>
+					</h3>
+					<p>May 2016 &ndash; August 2016</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="projects" class="min-h-screen p-20">
+		<h2 class="font-header text-2xl">Projects</h2>
+	</section>
+	<section id="contact" class="min-h-screen p-20">
+		<div class="flex flex-col items-center gap-4">
+			<h2 class="font-header text-2xl">Get in touch</h2>
+			<p>
+				Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+			</p>
+			<div class="bg-black">
+				<a
+					class="inline-block border bg-white px-4 py-2 transition-transform ease-in-out hover:-translate-1"
+					href="mailto:rck.srt@gmail.com"
+				>
+					Say Hello
+				</a>
+			</div>
+		</div>
+	</section>
+</main>
+<div class="fixed bottom-0 left-8 flex w-8 flex-col items-center gap-4">
+	<a class="sideways-lr" href="https://www.github.com/dev-tp" target="_blank">Github</a>
+	<div class="h-24 w-px bg-black"></div>
+</div>
+<div class="fixed right-8 bottom-0 flex w-8 flex-col items-center gap-4">
+	<a class="sideways-lr" href="mailto:rck.srt@gmail.com">rck.srt@gmail.com</a>
+	<div class="h-24 w-px bg-black"></div>
+</div>

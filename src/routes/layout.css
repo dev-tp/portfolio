@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@theme {
+	--font-header: 'SF Pro', sans-serif;
+	--font-mono: 'SF Mono', monospace;
+	--font-text: 'SF Pro Text', sans-serif;
+}
+
+.sideways-lr {
+	writing-mode: sideways-lr;
+}
