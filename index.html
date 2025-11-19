@@ -11,13 +11,19 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <nav class="fixed top-0 right-0 left-0 mx-12 my-4 flex justify-end">
+    <nav
+      class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end px-12"
+    >
       <ul class="flex gap-4">
-        <li class="px-3 py-2">About Me</li>
-        <li class="px-3 py-2">Work Experience</li>
-        <li class="px-3 py-2">Projects</li>
-        <li class="px-3 py-2">Get in touch</li>
-        <li><button class="border px-3 py-2">Resume</button></li>
+        <li class="px-4 py-2"><a href="#about">About Me</a></li>
+        <li class="px-4 py-2"><a href="#experience">Experience</a></li>
+        <li class="px-4 py-2"><a href="#projects">Projects</a></li>
+        <li class="px-4 py-2"><a href="#contact">Get in touch</a></li>
+        <li>
+          <a class="inline-block border px-4 py-2" href="#" target="_blank">
+            Résumé
+          </a>
+        </li>
       </ul>
     </nav>
     <main class="font-text mx-24">
@@ -32,10 +38,10 @@
           weekends.
         </p>
       </section>
-      <section class="min-h-screen">
+      <section id="about" class="min-h-screen pt-20">
         <h2 class="font-header text-2xl">About Me</h2>
       </section>
-      <section class="min-h-screen">
+      <section id="experience" class="min-h-screen pt-20">
         <h2 class="font-header text-2xl">Work Experience</h2>
         <div class="flex">
           <ul>
@@ -77,10 +83,10 @@
           </div>
         </div>
       </section>
-      <section class="min-h-screen">
+      <section id="projects" class="min-h-screen p-20">
         <h2 class="font-header text-2xl">Projects</h2>
       </section>
-      <section class="min-h-screen">
+      <section id="contact" class="min-h-screen p-20">
         <div class="grid gap-4 text-center">
           <h2 class="font-header text-2xl">Get in touch</h2>
           <p>
