@@ -2,6 +2,8 @@
 	import Button from '$lib/components/Button.svelte';
 	import ExperienceTimeline from '$lib/components/ExperienceTimeline.svelte';
 
+	import github from '$lib/assets/github.svg';
+
 	const about = 'about';
 	const contact = 'contact';
 	const experience = 'experience';
@@ -52,7 +54,9 @@
 	{/each}
 </main>
 <div class="fixed bottom-0 left-8 flex w-8 flex-col items-center gap-4">
-	<a class="sideways-lr" href="https://www.github.com/dev-tp" target="_blank">Github</a>
+	<a class="sideways-lr" href="https://www.github.com/dev-tp" target="_blank">
+		<img class="h-6 w-6" src={github} alt="GitHub" />
+	</a>
 	<div class="h-24 w-px bg-black"></div>
 </div>
 <div class="fixed right-8 bottom-0 flex w-8 flex-col items-center gap-4">
