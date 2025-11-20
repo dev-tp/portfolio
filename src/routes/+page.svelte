@@ -1,18 +1,14 @@
+<script>
+	import Button from '$lib/components/Button.svelte';
+</script>
+
 <nav class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end bg-inherit px-12">
 	<ul class="flex gap-4">
 		<li class="px-4 py-2"><a href="#about">About Me</a></li>
 		<li class="px-4 py-2"><a href="#experience">Experience</a></li>
 		<li class="px-4 py-2"><a href="#projects">Projects</a></li>
 		<li class="px-4 py-2"><a href="#contact">Get in touch</a></li>
-		<li class="bg-black">
-			<a
-				class="inline-block border bg-white px-4 py-2 transition-transform ease-in-out hover:-translate-1"
-				href="#"
-				target="_blank"
-			>
-				Résumé
-			</a>
-		</li>
+		<li><Button href="#">Résumé</Button></li>
 	</ul>
 </nav>
 <main class="mx-24 font-text">
@@ -75,14 +71,7 @@
 			<p>
 				Whether you have a question or just want to say hi, I’ll try my best to get back to you!
 			</p>
-			<div class="bg-black">
-				<a
-					class="inline-block border bg-white px-4 py-2 transition-transform ease-in-out hover:-translate-1"
-					href="mailto:rck.srt@gmail.com"
-				>
-					Say Hello
-				</a>
-			</div>
+			<Button href="mailto:rck.srt@gmail.com">Say Hello</Button>
 		</div>
 	</section>
 </main>
