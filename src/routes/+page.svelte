@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import ExperienceTimeline from '$lib/components/ExperienceTimeline.svelte';
 </script>
 
 <nav class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end bg-inherit px-12">
@@ -27,40 +28,7 @@
 	</section>
 	<section id="experience" class="min-h-screen pt-20">
 		<h2 class="font-header text-2xl">Work Experience</h2>
-		<div class="flex">
-			<ul>
-				<li><button>Cathedral of Our Lady of the Angels</button></li>
-				<li><button>Countrywide Trial Lawyers</button></li>
-				<li><button>UrbanTxT</button></li>
-			</ul>
-			<div>
-				<div>
-					<h3>
-						Web developer &amp; IT
-						<a href="https://www.olacathedral.org" target="_blank">
-							@ Cathedral of Our Lady of the Angels
-						</a>
-					</h3>
-					<p>January 2018 &ndash; August 2025</p>
-				</div>
-				<div>
-					<h3>
-						IT
-						<a href="https://www.countrywidetriallawyers.com" target="_blank">
-							@ Countrywide Trial Lawyers
-						</a>
-					</h3>
-					<p>January 2022 &ndash; Present</p>
-				</div>
-				<div>
-					<h3>
-						Instructor
-						<a href="https://www.urbantxt.org" target="_blank"> @ UrbanTxT </a>
-					</h3>
-					<p>May 2016 &ndash; August 2016</p>
-				</div>
-			</div>
-		</div>
+		<ExperienceTimeline />
 	</section>
 	<section id="projects" class="min-h-screen p-20">
 		<h2 class="font-header text-2xl">Projects</h2>
