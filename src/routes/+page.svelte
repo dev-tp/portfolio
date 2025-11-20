@@ -1,14 +1,25 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
 	import ExperienceTimeline from '$lib/components/ExperienceTimeline.svelte';
+
+	const about = 'about';
+	const contact = 'contact';
+	const experience = 'experience';
+	const projects = 'projects';
+
+	const sections = [
+		{ id: about, name: 'About Me' },
+		{ id: experience, name: 'Experience' },
+		{ id: projects, name: 'Projects' },
+		{ id: contact, name: 'Contact' }
+	];
 </script>
 
 <nav class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end bg-inherit px-12">
 	<ul class="flex gap-4">
-		<li class="px-4 py-2"><a href="#about">About Me</a></li>
-		<li class="px-4 py-2"><a href="#experience">Experience</a></li>
-		<li class="px-4 py-2"><a href="#projects">Projects</a></li>
-		<li class="px-4 py-2"><a href="#contact">Get in touch</a></li>
+		{#each sections as section}
+			<li class="px-4 py-2"><a href={`#${section.id}`}>{section.name}</a></li>
+		{/each}
 		<li><Button href="#">Résumé</Button></li>
 	</ul>
 </nav>
@@ -23,25 +34,22 @@
 			on the weekends.
 		</p>
 	</section>
-	<section id="about" class="min-h-screen pt-20">
-		<h2 class="font-header text-2xl">About Me</h2>
-	</section>
-	<section id="experience" class="min-h-screen pt-20">
-		<h2 class="font-header text-2xl">Work Experience</h2>
-		<ExperienceTimeline />
-	</section>
-	<section id="projects" class="min-h-screen p-20">
-		<h2 class="font-header text-2xl">Projects</h2>
-	</section>
-	<section id="contact" class="min-h-screen p-20">
-		<div class="flex flex-col items-center gap-4">
-			<h2 class="font-header text-2xl">Get in touch</h2>
-			<p>
-				Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-			</p>
-			<Button href="mailto:rck.srt@gmail.com">Say Hello</Button>
-		</div>
-	</section>
+	{#each sections as section}
+		<section id={section.id} class="min-h-screen pt-20">
+			<h2 class="mb-2 font-header text-2xl">{section.name}</h2>
+			{#if section.id === experience}
+				<ExperienceTimeline />
+			{:else if section.id === contact}
+				<div class="flex flex-col items-center gap-4">
+					<h3 class="font-header text-2xl">Get in touch</h3>
+					<p>
+						Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+					</p>
+					<Button href="mailto:rck.srt@gmail.com">Say Hello</Button>
+				</div>
+			{/if}
+		</section>
+	{/each}
 </main>
 <div class="fixed bottom-0 left-8 flex w-8 flex-col items-center gap-4">
 	<a class="sideways-lr" href="https://www.github.com/dev-tp" target="_blank">Github</a>
