@@ -47,7 +47,7 @@
 		{#each jobs as job, tab}
 			<li>
 				<button
-					class="w-full border-l border-slate-900 p-4 text-start font-mono text-sm hover:bg-slate-200"
+					class="w-full border-l border-slate-900 p-4 text-start font-mono text-sm text-nowrap hover:bg-slate-200"
 					class:bg-slate-100={tab === activeTab}
 					class:border-l-2={tab === activeTab}
 					class:border-slate-500={tab === activeTab}
@@ -58,22 +58,20 @@
 			</li>
 		{/each}
 	</ul>
-	<div class="relative grow pt-2">
-		{#each jobs as job, tab}
-			{#if tab === activeTab}
-				<div class="absolute flex flex-col gap-2" transition:fade>
-					<h3 class="text-xl">
-						{job.position}
-						<a class="font-bold" href={job.website} target="_blank"> @ {job.location}</a>
-					</h3>
-					<p>{job.tenure}</p>
-					<ul class="list-outside list-disc pl-4">
-						{#each job.tasks as task}
-							<li class="mb-2">{task}</li>
-						{/each}
-					</ul>
-				</div>
-			{/if}
-		{/each}
-	</div>
+	{#each jobs as job, tab}
+		{#if tab === activeTab}
+			<div class="grid gap-2 pt-2" in:fade>
+				<h3 class="text-xl">
+					{job.position}
+					<a class="font-bold" href={job.website} target="_blank"> @ {job.location}</a>
+				</h3>
+				<p>{job.tenure}</p>
+				<ul class="list-outside list-disc pl-4">
+					{#each job.tasks as task}
+						<li class="mb-2">{task}</li>
+					{/each}
+				</ul>
+			</div>
+		{/if}
+	{/each}
 </div>
