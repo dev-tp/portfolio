@@ -1,7 +1,7 @@
 <script>
 	import FeaturedProject from './FeaturedProject.svelte';
 
-	/** @type import('./FeaturedProject.svelte').Project[] */
+	/** @type import('./Project.svelte').Project[] */
 	const projects = [];
 </script>
 

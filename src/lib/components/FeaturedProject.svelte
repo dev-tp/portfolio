@@ -1,15 +1,7 @@
 <script module>
-	/** @typedef {Object} Project
-	 * @property {string} name
-	 * @property {string | string[]} description
-	 * @property {string[]} stack
-	 * @property {string} [githubLink]
-	 * @property {string} [link]
-	 */
-
 	/** @typedef {Object} Props
 	 * @property {'left' | 'right'} [position]
-	 * @property {Project} project
+	 * @property {import('./Project.svelte').Project} project
 	 */
 </script>
 
