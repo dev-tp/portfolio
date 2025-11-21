@@ -5,11 +5,7 @@
 	const projects = [];
 </script>
 
-{#if projects.length === 0}
-	<div class="mb-4 text-center">
-		<h3 class="text-xl/10">No other noteworthy projects at the moment</h3>
-	</div>
-{:else}
+{#if projects.length !== 0}
 	<div class="mb-4 text-center">
 		<h3 class="text-xl/10">Other noteworthy projects</h3>
 		<a class="font-mono text-sm" href="/archive">View the archive</a>

@@ -5,6 +5,10 @@
 	const projects = [];
 </script>
 
-{#each projects as project, i}
-	<FeaturedProject position={i % 2 === 0 ? 'left' : 'right'} {project} />
-{/each}
+{#if projects.length === 0}
+	<h3 class="p-4 text-center text-xl">No featured projects at the moment</h3>
+{:else}
+	{#each projects as project, i}
+		<FeaturedProject position={i % 2 === 0 ? 'left' : 'right'} {project} />
+	{/each}
+{/if}
