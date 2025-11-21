@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
 	import ExperienceTimeline from '$lib/components/ExperienceTimeline.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 
 	import github from '$lib/assets/github.svg';
 
@@ -17,14 +18,7 @@
 	];
 </script>
 
-<nav class="fixed top-0 right-0 left-0 flex h-20 items-center justify-end bg-inherit px-12">
-	<ul class="flex gap-4">
-		{#each sections as section}
-			<li class="px-4 py-2"><a href={`#${section.id}`}>{section.name}</a></li>
-		{/each}
-		<li><Button href="#">Résumé</Button></li>
-	</ul>
-</nav>
+<Nav {sections} />
 <main class="mx-24 font-text">
 	<section class="flex h-screen flex-col justify-center">
 		<p class="font-mono">Hello, my name is</p>
