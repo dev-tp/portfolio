@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
 	import ExperienceTimeline from '$lib/components/ExperienceTimeline.svelte';
+	import FeaturedProjects from '$lib/components/FeaturedProjects.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 
 	import github from '$lib/assets/github.svg';
@@ -35,6 +36,8 @@
 			<h2 class="mb-2 font-header text-2xl">{section.name}</h2>
 			{#if section.id === experience}
 				<ExperienceTimeline />
+			{:else if section.id === projects}
+				<FeaturedProjects />
 			{:else if section.id === contact}
 				<div class="flex flex-col items-center gap-4">
 					<h3 class="font-header text-2xl">Get in touch</h3>

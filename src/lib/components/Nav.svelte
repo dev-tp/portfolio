@@ -27,7 +27,7 @@
 />
 
 <nav
-	class="fixed top-0 right-0 left-0 z-10 flex h-20 items-center justify-end bg-white px-12"
+	class="fixed top-0 right-0 left-0 z-20 flex h-20 items-center justify-end bg-white px-12"
 	class:hidden={hide}
 	class:shadow={offset > 0}
 >
