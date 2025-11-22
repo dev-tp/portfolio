@@ -10,8 +10,13 @@
 
 {#if projects.length !== 0}
 	<div class="mb-8 text-center">
-		<h3 class="text-2xl/10">Other noteworthy projects</h3>
-		<a class="font-mono" href="/archive">View the archive</a>
+		<h3 class="text-2xl/12">Other noteworthy projects</h3>
+		<a
+			class="relative font-mono after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-black after:transition-all after:content-[''] hover:after:w-full"
+			href="/"
+		>
+			View the archive
+		</a>
 	</div>
 	<div class="mb-8 grid grid-cols-3 gap-4">
 		{#each projects as project, i}
