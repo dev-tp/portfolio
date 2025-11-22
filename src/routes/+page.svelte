@@ -33,7 +33,7 @@
 		</p>
 	</section>
 	{#each sections as section}
-		<section id={section.id} class="min-h-screen pt-20">
+		<section id={section.id} class="pt-20">
 			<h2 class="mb-2 font-header text-2xl">{section.name}</h2>
 			{#if section.id === experience}
 				<ExperienceTimeline />
