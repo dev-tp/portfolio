@@ -15,21 +15,21 @@
 	/** @type Props */
 	let { sections } = $props();
 
-	let hide = $state(false);
+	let delta = $state(0);
 	let offset = $state(0);
 </script>
 
 <svelte:window
 	onscroll={(event) => {
-		hide = event.currentTarget.pageYOffset > offset;
+		delta = event.currentTarget.pageYOffset - offset;
 		offset = event.currentTarget.pageYOffset;
 	}}
 />
 
 <nav
-	class="fixed top-0 right-0 left-0 z-20 flex h-20 items-center justify-end bg-white px-12"
-	class:hidden={hide}
-	class:shadow={offset > 0}
+	class="fixed top-0 right-0 left-0 z-20 flex h-20 items-center justify-end bg-white px-12 transition-transform duration-500"
+	class:-translate-y-20={delta > 0}
+	class:shadow={offset !== 0}
 >
 	<ul class="flex gap-4">
 		{#each sections as section}
