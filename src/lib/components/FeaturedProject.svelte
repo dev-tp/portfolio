@@ -26,12 +26,12 @@
 
 <div class="mb-20 grid grid-cols-12">
 	<div class={`${contentClass} flex items-center`}>
-		<div class="grid gap-2" class:text-end={position === 'left'}>
+		<div class="relative z-10 grid gap-2" class:text-end={position === 'left'}>
 			<div>
 				<p class="text-sm text-slate-500">Featured Project</p>
 				<h3 class="text-xl">{project.name}</h3>
 			</div>
-			<div class="relative z-10 grid gap-4 bg-slate-800 p-4 text-white">
+			<div class="grid gap-4 bg-slate-800 p-4 text-white">
 				{#if project.description instanceof Array}
 					{#each project.description as text}
 						<p>{text}</p>
