@@ -42,22 +42,25 @@
 	let activeTab = $state(0);
 </script>
 
-<div class="flex gap-4">
-	<ul>
-		{#each jobs as job, tab}
-			<li>
-				<button
-					class="w-full border-l border-slate-900 p-4 text-start font-mono text-sm text-nowrap hover:bg-slate-200"
-					class:bg-slate-100={tab === activeTab}
-					class:border-l-2={tab === activeTab}
-					class:border-slate-500={tab === activeTab}
-					onclick={() => (activeTab = tab)}
-				>
-					{job.location}
-				</button>
-			</li>
-		{/each}
-	</ul>
+<div class="flex flex-col gap-4 md:flex-row">
+	<div class="overflow-auto md:overflow-clip">
+		<ul class="flex overflow-auto md:block">
+			{#each jobs as job, tab}
+				<li>
+					<button
+						class="w-full border-b border-slate-900 p-4 text-start font-mono text-sm text-nowrap hover:bg-slate-200 md:border-b-0 md:border-l"
+						class:bg-slate-100={tab === activeTab}
+						class:border-b-2={tab === activeTab}
+						class:border-slate-500={tab === activeTab}
+						class:md:border-l-2={tab === activeTab}
+						onclick={() => (activeTab = tab)}
+					>
+						{job.location}
+					</button>
+				</li>
+			{/each}
+		</ul>
+	</div>
 	{#each jobs as job, tab}
 		{#if tab === activeTab}
 			<div class="grid gap-2 pt-2" in:fade>
