@@ -13,19 +13,21 @@
 	/** @type Props */
 	let { position = 'right', project } = $props();
 
-	const contentClass =
-		position === 'right'
-			? 'col-start-1 col-end-7 row-start-1 row-end-1'
-			: 'col-start-7 -col-end-1 row-start-1 row-end-1';
-
-	const imageContainerClass =
-		position === 'right'
-			? 'col-start-6 -col-end-1 row-start-1 -row-end-1'
-			: 'col-start-1 col-end-8 row-start-1 row-end-1';
+	/** @type function(...string): string */
+	function clsx(...classNames) {
+		return classNames.join(' ');
+	}
 </script>
 
 <div class="mb-20 grid grid-cols-12">
-	<div class={`${contentClass} flex items-center`}>
+	<div
+		class={clsx(
+			'flex items-center',
+			position === 'right'
+				? 'col-start-1 col-end-7 row-start-1 row-end-1'
+				: 'col-start-7 -col-end-1 row-start-1 row-end-1'
+		)}
+	>
 		<div class="relative z-10 grid gap-2" class:text-end={position === 'left'}>
 			<div>
 				<p class="text-sm text-slate-500">Featured Project</p>
@@ -56,6 +58,11 @@
 		</div>
 	</div>
 	<div
-		class={`${imageContainerClass} min-h-96 bg-slate-900 transition-colors duration-500 hover:bg-slate-700`}
+		class={clsx(
+			'min-h-96 bg-slate-900 transition-colors duration-500 hover:bg-slate-700',
+			position === 'right'
+				? 'col-start-6 -col-end-1 row-start-1 -row-end-1'
+				: 'col-start-1 col-end-8 row-start-1 row-end-1'
+		)}
 	></div>
 </div>
