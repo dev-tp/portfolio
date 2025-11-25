@@ -52,13 +52,15 @@
 		</section>
 	{/each}
 </main>
-<div class="fixed bottom-0 left-8 flex w-8 flex-col items-center gap-4">
+<div
+	class="static bottom-0 left-8 mb-4 flex w-full items-center justify-center gap-4 md:fixed md:m-0 md:w-8 md:flex-col md:p-0"
+>
 	<a class="sideways-lr" href="https://www.github.com/dev-tp" target="_blank">
 		<img class="h-6 w-6" src={github} alt="GitHub" />
 	</a>
-	<div class="h-24 w-px bg-black"></div>
+	<div class="hidden h-24 w-px bg-black md:block"></div>
 </div>
-<div class="fixed right-8 bottom-0 flex w-8 flex-col items-center gap-4">
+<div class="fixed right-8 bottom-0 hidden w-8 flex-col items-center gap-4 md:flex">
 	<a class="sideways-lr" href="mailto:rck.srt@gmail.com">rck.srt@gmail.com</a>
 	<div class="h-24 w-px bg-black"></div>
 </div>
