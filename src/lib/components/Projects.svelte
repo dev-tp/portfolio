@@ -18,7 +18,7 @@
 			View the archive
 		</a>
 	</div>
-	<div class="mb-8 grid grid-cols-3 gap-4">
+	<div class="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
 		{#each projects as project, i}
 			{#if i < 6 || showMore}
 				<Project {project} />
@@ -26,7 +26,7 @@
 		{/each}
 	</div>
 	{#if projects.length > 6}
-		<div class="mb-8 flex justify-center">
+		<div class="flex justify-center">
 			<Button onclick={() => (showMore = !showMore)}>
 				{showMore ? 'Show Less' : 'Show More'}
 			</Button>

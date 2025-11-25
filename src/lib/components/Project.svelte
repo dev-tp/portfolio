@@ -37,7 +37,7 @@
 		<h4 class="text-lg">{project.name}</h4>
 		<p>{project.description}</p>
 	</div>
-	<ul class="mt-4 flex gap-4 font-mono text-sm">
+	<ul class="mt-4 flex gap-4 overflow-auto font-mono text-sm text-nowrap">
 		{#each project.stack as item}
 			<li>{item}</li>
 		{/each}
