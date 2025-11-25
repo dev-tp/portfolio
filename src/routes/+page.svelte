@@ -41,10 +41,10 @@
 				<FeaturedProjects />
 				<Projects />
 			{:else if section.id === contact}
-				<div class="flex flex-col items-center gap-4">
+				<div class="mb-8 flex flex-col items-center gap-4">
 					<h3 class="font-header text-2xl">Get in touch</h3>
-					<p>
-						Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+					<p class="text-center">
+						Whether you have a question or just want to say hi, I'll try my best to get back to you!
 					</p>
 					<Button href="mailto:rck.srt@gmail.com">Say Hello</Button>
 				</div>
