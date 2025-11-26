@@ -15,7 +15,7 @@
 
 	/** @type function(...string): string */
 	function clsx(...classNames) {
-		return classNames.join(' ');
+		return classNames.filter((className) => className && className !== '').join(' ');
 	}
 </script>
 
