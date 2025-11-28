@@ -73,9 +73,16 @@
 		</button>
 	</div>
 </nav>
-<div class="fixed inset-0 z-20 bg-black/80 md:hidden" class:hidden={!open}>
-	<div class="fixed top-0 right-0 bottom-0 z-30 bg-white">
-		<button class="flex w-full justify-center p-4" onclick={() => toggleMenu()}>
+<div
+	class="invisible fixed inset-0 z-20 bg-black/80 opacity-0 transition-all duration-500 md:hidden"
+	class:opacity-100={open}
+	class:visible={open}
+>
+	<div
+		class="fixed top-0 right-0 bottom-0 z-30 w-1/4 translate-x-0 bg-white transition-transform duration-250"
+		class:translate-x-full={!open}
+	>
+		<button class="flex h-16 w-full items-center justify-end pr-8" onclick={() => toggleMenu()}>
 			<X class="h-6 w-6" />
 		</button>
 		{@render options()}
